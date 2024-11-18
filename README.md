@@ -119,9 +119,23 @@ INSERT INTO roles (id, name, created_at, updated_at) VALUES
 Tabela (permissions)
 ```
 INSERT INTO permissions (id, name, created_at, updated_at) VALUES 
-(1, 'view_users', NOW(), NOW()),
-(2, 'edit_users', NOW(), NOW()),
-(3, 'delete_users', NOW(), NOW());
+(1, 'Administrador', NOW(), NOW()),
+(2, 'Operador', NOW(), NOW()),
+(4, 'view_produtos', NOW(), NOW()),
+(5, 'view_categorias', NOW(), NOW()),
+(6, 'view_marcas', NOW(), NOW());
+
+```
+Tabela (role_permission)
+```
+INSERT INTO role_permission (id, role_id, permission_id) VALUES 
+(1, 1, 1),  -- Administrador com permissão de Administrador
+(2, 1, 2),  -- Administrador com permissão de Operador
+(4, 2, 1),  -- Operador com permissão de Administrador
+(5, 2, 2),  -- Operador com permissão de Operador
+(7, 2, 4),  -- Operador com permissão de visualizar produtos
+(8, 2, 5),  -- Operador com permissão de visualizar categorias
+(9, 2, 6);  -- Operador com permissão de visualizar marcas
 ```
 
 Usuário Administrador
@@ -133,6 +147,11 @@ Usuário Operador
 ```
 INSERT INTO users (name, email, password, role_id, created_at, updated_at) VALUES 
 ('Operator User', 'operator@example.com', '$2y$10$hashed_password_here', 2, NOW(), NOW());
+```
+Substitua $2y$10$hashed_password_here pela senha hash gerada do valor desejado. Por exemplo, para a senha 123456, você pode gerar o hash utilizando:
+```
+php artisan tinker
+>>> bcrypt('123456')
 ```
 
 ## 🖥️ Como Usar
