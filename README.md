@@ -83,14 +83,14 @@ cd repositorio
 
 ## Configurar o Banco de Dados
 Inicie o XAMPP e ative o servidor MySQL.<br />
-Acesse o phpMyAdmin e crie um banco de dados chamado teste_pratico.<br />
+Acesse o phpMyAdmin e crie um banco de dados chamado database.<br />
 Configure o arquivo .env:<br />
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=teste_pratico
-DB_USERNAME=root
+DB_DATABASE=database
+DB_USERNAME=root 
 DB_PASSWORD=
 ```
 
