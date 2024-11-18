@@ -160,11 +160,11 @@ Abra o navegador e acesse: http://localhost/(projeto)/public/.<br />
 Faça login com as credenciais:<br />
 ## Administrador
 Usuário admin@example.com	<br />	
-Senha admin123<br />
+Senha (Você define)<br />
 
 ## Operador
 Usuário operator@example.com<br />
-Senha	operator123<br />
+Senha	(Você define)<br />
 
 
 
