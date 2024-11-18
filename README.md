@@ -1,66 +1,152 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+🎨 Sistema de Gerenciamento - Teste Prático Laravel
+<p align="center"> <img src="https://img.shields.io/badge/Laravel-10.x-red" alt="Laravel 10.x"> <img src="https://img.shields.io/badge/MySQL-8.0-blue" alt="MySQL 8.0"> <img src="https://img.shields.io/badge/Bootstrap-5.x-purple" alt="Bootstrap 5.x"> <img src="https://img.shields.io/badge/Status-Completed-brightgreen" alt="Status Completed"> </p>
+Um sistema de gerenciamento criado como teste prático para a vaga de programador PHP Laravel na Santa Casa de Porto Alegre.
+Este projeto visa demonstrar habilidades em Laravel, organização de código e boas práticas
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+## ⚙️ Funcionalidades
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Usuários e Permissões:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+✅ CRUD completo para Usuários e Permissões.<br /> 
+✅ Apenas administradores têm acesso a essas funcionalidades.<br /> 
+Acesso Diferenciado:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Administradores:** Acesso a usuários e permissões.<br /> 
+**Operadores:** Acesso a produtos, categorias e marcas.<br /> 
+<br /> 
+**Segurança:**<br /> 
+🔒 Controle de acesso baseado em roles (funções).<br /> 
+Interface Estética:<br /> 
+🎨 Layout moderno utilizando Bootstrap.<br /> 
+📱 Design responsivo para melhor experiência.<br /> 
 
-## Learning Laravel
+## 🛠 Tecnologias Utilizadas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Laravel 10:** Framework PHP para construção de aplicações modernas.<br /> 
+**MySQL:** Banco de dados relacional para armazenamento de dados.<br /> 
+**Bootstrap 5:** Framework CSS para estilização e responsividade.<br /> 
+**GitHub:** Para versionamento do projeto.<br /> 
+**PHP 8.1+:** Versão mínima necessária para compatibilidade.<br /> 
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 📂 Estrutura do Projeto
+```plaintext
+/teste_pratico
+├── app/
+│   ├── Controllers/
+│   │   ├── UserController.php
+│   │   ├── PermissionController.php
+│   │   ├── ProdutoController.php
+│   │   ├── CategoriaController.php
+│   │   ├── MarcaController.php
+│   │
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── Role.php
+│   │   ├── Permission.php
+│   │
+├── resources/
+│   ├── views/
+│   │   ├── usuarios/
+│   │   ├── permissions/
+│   │   ├── produtos/
+│   │   ├── categorias/
+│   │   ├── marcas/
+│   │   ├── layouts/
+│   │   └── welcome.blade.php
+│
+├── routes/
+│   ├── web.php
+│
+├── public/
+│   ├── index.php
+│
+└── README.md
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```
+## 🚀 Passo a Passo para Instalação
+Pré-requisitos<br />
+Certifique-se de ter os seguintes softwares instalados:<br />
 
-## Laravel Sponsors
+PHP (>= 8.1)<br />
+Composer<br />
+MySQL<br />
+XAMPP ou outro servidor local.<br />
+Git<br />
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Clonar o Repositório
+```
+git clone https://github.com/(repositorio)
+cd repositorio
+```
 
-### Premium Partners
+## Configurar o Banco de Dados
+Inicie o XAMPP e ative o servidor MySQL.<br />
+Acesse o phpMyAdmin e crie um banco de dados chamado teste_pratico.<br />
+Configure o arquivo .env:<br />
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=teste_pratico
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## Instalar Dependências
+```
+composer install
+npm install
+npm run build
+```
 
-## Contributing
+## Configurar as Tabelas
+```
+php artisan migrate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Configurar Banco de dados (IMPORTANTE)
+Adicione os seguintes registros diretamente no banco:<br />
 
-## Code of Conduct
+Tabela (roles)
+```
+INSERT INTO roles (id, name, created_at, updated_at) VALUES 
+(1, 'Administrador', NOW(), NOW()),
+(2, 'Operador', NOW(), NOW());
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Tabela (permissions)
+```
+INSERT INTO permissions (id, name, created_at, updated_at) VALUES 
+(1, 'view_users', NOW(), NOW()),
+(2, 'edit_users', NOW(), NOW()),
+(3, 'delete_users', NOW(), NOW());
+```
 
-## Security Vulnerabilities
+Usuário Administrador
+```
+INSERT INTO users (name, email, password, role_id, created_at, updated_at) VALUES 
+('Admin User', 'admin@example.com', '$2y$10$hashed_password_here', 1, NOW(), NOW());
+```
+Usuário Operador
+```
+INSERT INTO users (name, email, password, role_id, created_at, updated_at) VALUES 
+('Operator User', 'operator@example.com', '$2y$10$hashed_password_here', 2, NOW(), NOW());
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🖥️ Como Usar
+Acesso ao Sistema<br />
+Abra o navegador e acesse: http://localhost/(projeto)/public/.<br />
+Faça login com as credenciais:<br />
+## Administrador
+Usuário admin@example.com	<br />	
+Senha admin123<br />
 
-## License
+## Operador
+Usuário operator@example.com<br />
+Senha	operator123<br />
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
